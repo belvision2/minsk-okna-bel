@@ -1,0 +1,209 @@
+        <link rel="shortcut icon" href="http://xn----8sbwibiidh1a.xn--90ais/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="http://xn----8sbwibiidh1a.xn--90ais/css/reset.css">
+        <link rel="stylesheet" href="http://xn----8sbwibiidh1a.xn--90ais/css/main.css">
+        <link rel="stylesheet" href="http://xn----8sbwibiidh1a.xn--90ais/css/animate.css">
+        <link rel="stylesheet" href="http://xn----8sbwibiidh1a.xn--90ais/css/carousel.css">
+		 <link rel="stylesheet" href="http://xn----8sbwibiidh1a.xn--90ais/css/countdown.css">
+		 <link rel="stylesheet" href="http://xn----8sbwibiidh1a.xn--90ais/css/fancySelect.css">
+		 <link rel="stylesheet" href="http://xn----8sbwibiidh1a.xn--90ais/css/boutique.css">
+		 <link rel="stylesheet" href="http://xn----8sbwibiidh1a.xn--90ais/css/jquery-ui.css">
+		 <link rel="stylesheet" href="http://xn----8sbwibiidh1a.xn--90ais/css/prettyPhoto.css">
+		
+       <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,700italic,300,300italic,500,500italic,900,900italic&amp;subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'> 
+       <link href='http://fonts.googleapis.com/css?family=Roboto%20Condensed:400,700,700italic,300,300italic,500,500italic,900,900italic&amp;subset=latin,cyrillic-ext,cyrillic' rel='stylesheet' type='text/css'>
+ 
+        <script src="http://xn----8sbwibiidh1a.xn--90ais/js/jquery-1.11.1.min.js"></script>
+        <script src="http://xn----8sbwibiidh1a.xn--90ais/js/jquery.cookie.js"></script>
+        <script src="http://xn----8sbwibiidh1a.xn--90ais/js/jquery-ui.min.js"></script>
+        <script src="http://xn----8sbwibiidh1a.xn--90ais/js/fancySelect.js"></script>
+        <script src="http://xn----8sbwibiidh1a.xn--90ais/js/jquery.boutique.js"></script>
+		<script src="http://xn----8sbwibiidh1a.xn--90ais/js/jquery.prettyPhoto.js"></script>
+		<script src="http://xn----8sbwibiidh1a.xn--90ais/js/jquery.lockfixed.min.js"></script>
+		<script src="http://xn----8sbwibiidh1a.xn--90ais/js/jquery.inputmask.min.js"></script>
+		      
+
+
+		 <script src="http://xn----8sbwibiidh1a.xn--90ais/js/jquery.countdown.js"></script>
+        <script src="http://xn----8sbwibiidh1a.xn--90ais/js/carousel.js"></script>
+        <script src="http://xn----8sbwibiidh1a.xn--90ais/js/jquery.scrollTo-min.js"></script>
+
+
+ 	
+
+    </head>
+    <body>
+	<div id="popup1" class="popup1" >
+		<div id="btn-close" class="f-close"> </div>
+		<div class="header white">ЗАКАЗАТЬ ЗВОНОК</div> 
+		
+		<input type="hidden" class="pop_type" value="">
+		<input class="pop_name" type="text" placeholder='Ваше имя' value=''>
+		<input class="pop_tel" type="text" placeholder='Телефон' value=''  >
+       	<div  id="callback-send1" class="b_yellow">ЖДУ ЗВОНКА</div>
+		 
+	</div> 
+
+	<div id="spasibo" class="spasibo" >
+		<div class="header">СПАСИБО!</div> 
+		<div class="p1_msg">
+			Ваша заявка отправлена успешно.
+		</div>
+
+		<a  id="callback-spasibo" class="btn b_red">ЗАКРЫТЬ</a>
+		 
+	</div>    
+
+	<div id="pozdr" class="pozdr" >
+		<div id="btn-close" class="f-close"> </div>
+		<div class="header black">ПОЗДРАВЛЯЕМ!</div> 
+		<div class="p1_msg black">
+			<span style="font-family:officinaserifcregular;">Вы стали победителем ежедневного розыгрыша среди посетителей сайта!</span>
+			<span style="font-family:officinaserifcbold;">Заполните форму ниже и получите дополнительную скидку!</span>
+
+ 		</div>
+		<input class="pozdr_name" type="text" value='' placeholder="Ваше имя" >
+		<input class="pozdr_tel" type="text" value='' placeholder="Телефон"  >
+		<div  id="callback-pozdr" class="btn b_blue2 white">ОТПРАВИТЬ</div>
+		 <div class="sec">Окно закроется через <span id="sec">60</span> секунд</div>
+	</div> 		
+	
+	<div id="hide-layout" class="hide-layout" ></div>
+	<!--<div id="hide-layout_pozdr" class="hide-layout" ></div>-->
+	
+		<div class="section s-top">
+			<div class="content">
+				<div class="logo">
+					<a href="http://xn----8sbwibiidh1a.xn--90ais/1/">
+						<img src="http://xn----8sbwibiidh1a.xn--90ais/img/logo.png" title="Минск-Окна.бел" alt="Минск-Окна.бел 2">
+					</a>
+				</div>	
+				<div class="spisok">
+					<select class="v_select">
+						<option value="msk" >Минск</option>					</select>
+<script>
+	$('.v_select').fancySelect();
+	$(".pop_tel").inputmask("+375 (99) 999-99-99");
+	$(".pozdr_tel").inputmask("+375 (99) 999-99-99");
+</script>
+					
+				</div>	
+				<div class="vyzov">
+					<div class="st">	
+						<a href="http://xn----8sbwibiidh1a.xn--90ais/1/plastikovye_okna_kalkuljator.html">Рассчитать стоимость</a>
+					</div>
+					<div class="zam">
+						<a href="#">Вызвать замерщика</a>
+					</div>
+				</div>					
+				<div class="tel">
+					<p class="white"> <a style="text-decoration:none;" class="white comagic_phone" href="tel:80173344380">гор. 8017-233-60-86</a><br /><a style="text-decoration:none;background: url(velcom.png) 0px center no-repeat;    padding-left: 28px;" class="white comagic_phone" href="tel:80291400655">     8029-341-04-80</a> <a style="text-decoration:none;background: url(mts.png) 0px center no-repeat;    padding-left: 28px;" class="white comagic_phone" href="tel:80337600655">8033-760-06-55</a></p>
+					
+					<div class="call">ВАМ ПЕРЕЗВОНИТЬ?</div>
+				</div>	
+			</div>	
+		</div>	
+			<div class="section m_section">
+			<div class="content">
+				<div class="best1"></div>
+				<ul class="menu">
+					<!-- <li class="m_active" ><div><a href="http://xn----8sbwibiidh1a.xn--90ais/1//">Пластиковые окна</a></div> -->
+					<li class="sub  m_active " ><div><a href="http://xn----8sbwibiidh1a.xn--90ais/1/">Пластиковые окна</a></div>
+						<ul>
+							<li><a href="http://xn----8sbwibiidh1a.xn--90ais/1/plastikovye_okna_kalkuljator.html">Цены на окна</a></li>
+							<li><a href="http://xn----8sbwibiidh1a.xn--90ais/1/gotovye_okna.html">Готовые окна</a></li>
+							<li><a href="http://xn----8sbwibiidh1a.xn--90ais/1/rolshtory.html">Рольшторы</a></li>
+						</ul>
+					
+					</li>
+					<li ><a href="http://xn----8sbwibiidh1a.xn--90ais/1/osteklenie_balkonov.html">Остекление балконов</a></li>
+					<li ><a href="http://xn----8sbwibiidh1a.xn--90ais/1/otdelka_balkonov.html">Отделка лоджий</a></li>
+					<!-- <li ><a href="http://xn----8sbwibiidh1a.xn--90ais/1//osteklenie_kottedzha.html">Окна для коттеджа</a></li> -->
+					<li class="sub " ><div><a href="http://xn----8sbwibiidh1a.xn--90ais/1/osteklenie_kottedzha.html">Окна для коттеджа</a></div>
+						<ul>
+							<li><a href="http://xn----8sbwibiidh1a.xn--90ais/1/derevjannye_okna.html">Деревянные окна</a></li>
+							<li><a href="http://xn----8sbwibiidh1a.xn--90ais/1/svetoprozrachnye_konstrukcii.html">Остекление из ПВХ и AL</a></li>
+						</ul>
+					
+					</li>
+			<!--		<li class="sub"><div><a href="http://xn----8sbwibiidh1a.xn--90ais/1/#">Услуги</a></div>
+						<ul>
+							<li><a href="http://xn----8sbwibiidh1a.xn--90ais/1/#">Ламинация и выкрас</a></li>
+							<li><a href="http://xn----8sbwibiidh1a.xn--90ais/1/#">Установка откосов</a></li>
+							<li><a href="http://xn----8sbwibiidh1a.xn--90ais/1/#">Нестандартные окна</a></li>
+						</ul>
+				-->	</li>
+					<li><a href="http://xn----8sbwibiidh1a.xn--90ais/1/gde_kupit_okna.html">КОНТАКТЫ</a></li>
+					<li class="last "><a href="http://xn----8sbwibiidh1a.xn--90ais/1/skidki_na_okna.html">% Акции и скидки</a></li>
+				
+				</ul>
+				
+			</div>
+		</div>
+
+<div class="scroll" onclick="$('.vyzov .zam a').click();">
+<img src="img/besplatnyj_zamer.png">
+</div>		
+<div class="toptop">
+<br>наверх
+</div>
+<script>
+$('.tel .call').click(function(){
+	$('.popup1 .pop_type').val('call');
+	$('.popup1 .header').html('МЫ ПЕРЕЗВОНИМ ЧЕРЕЗ 5 МИНУТ!');
+	$('#hide-layout, #popup1').fadeIn(300);
+})
+
+$('.vyzov .zam a').click(function(){
+	$('.popup1 .pop_type').val('zamer');
+	$('.popup1 .header').html('ЗАПИСЬ НА <span class="yellow">БЕСПЛАТНЫЙ</span> ЗАМЕР!');
+	$('#hide-layout, #popup1').fadeIn(300);
+})
+</script>		
+		
+<script>
+
+	var a=0;
+	
+		$(window).scroll(function() {
+			if (($(this).scrollTop() > 500) && ($(this).scrollTop() < $(document).height()-1000) ) {
+			//if (($(this).scrollTop() > 500)) {
+				if (a==0){
+				$('.scroll').animate({right:15});
+				a=1;
+				}
+			} else {
+				if (a==1)
+				{
+					$('.scroll').animate({right:-200});
+					a=0;
+				}
+			}
+		});
+
+var b=0;
+	
+		$(window).scroll(function() {
+			if (($(this).scrollTop() > 500)  ) {
+			//if (($(this).scrollTop() > 500)) {
+				if (b==0){
+				$('.toptop').animate({left:15});
+				b=1;
+				}
+			} else {
+				if (b==1)
+				{
+					$('.toptop').animate({left:-200});
+					b=0;
+				}
+			}
+		});		
+
+
+$(".toptop").click(function () 
+	{	
+		$("body,html").animate({	
+			scrollTop: 0	}, 100);	
+			return false	
+	});			
+		
+</script>	

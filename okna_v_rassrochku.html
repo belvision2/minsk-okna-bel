@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html>
+    
+
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Пластиковые окна в рассрочку</title> 
+        <meta name="description" content="">
+  <!--#include virtual="/header.html"-->  	
+		<div class="section s12">
+			<div class="content">
+				<h1 class="black">
+					Купить окна в рассрочку
+				</h1>
+				<p class="p_text">
+					Решили установить новые окна, но недостаточно средств? Не беда! Воспользуйтесь беспроцентной рассрочкой в компании «Минск-Окна.бел» и наслаждайтесь тишиной и комфортом не теряя времени!
+				</p>
+				
+			<div class="okno_mod ">
+				<div class="okno_b1 w_block">
+					<div class="ht">
+						0<span style="font-size:120px;">%</span>
+					</div>
+					<div class="b_text">
+						Рассрочка<br>
+						<span>Без переплаты</span>
+					</div>
+					<div class="clr"></div>
+				</div>
+			
+				<div class="okno_b2 w_block">
+					<div class="hh">
+						0% предоплата
+					</div>
+				</div>	
+
+				<div class="okno_b3 w_block">
+					<div class="hh">
+						На срок от 6 до 36 месяцев
+					</div>
+				</div>				
+				
+				<div class="okno_b4 w_block">
+					<div class="hh">
+						Оформление за 15 минут
+					</div>
+
+			
+		
+
+				
+			</div>
+
+			</div>
+		</div>
+
+<script>
+/*
+$(window).scroll( function(){
+
+	var blocks = $('.w_blocks').children();
+
+	var  windowSize = $(window).height();
+	var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+	
+	var viewportTop = $(scrollElem).scrollTop();
+	var	viewportBottom = (viewportTop + windowSize);
+	var offset=100;
+	
+	 var elemTop =  Math.round(blocks.offset().top ) - offset ;
+     var elemBottom = elemTop + (blocks.height());
+	
+	if ((elemTop < viewportBottom) && (elemBottom > viewportTop)){
+		var i = 0;
+		animateCircle1(blocks);
+	
+	};
+	
+	 function animateCircle1() {
+            
+			$(blocks[i]).addClass('visible animated fadeIn');
+			$(blocks[i]).removeClass('hidden');
+      
+        i++;
+        if (i <= blocks.length) {
+            startAnimation();
+        }
+    }
+    
+    function startAnimation() {
+        setTimeout(function () {
+            animateCircle1();}, 450);
+    }
+
+});		*/
+</script>	
+
+
+<script>
+
+
+$(function(){
+	
+	var note = $('#note'),
+		ts = new Date(2016,3,5),
+		newYear = true;
+	
+	if((new Date()) > ts){
+		// The new year is here! Count towards something else.
+		// Notice the *1000 at the end - time must be in milliseconds
+		ts = (new Date()).getTime() + 10*24*60*60*1000;
+		newYear = false;
+	}
+		
+	$('#countdown1').countdown({
+		timestamp	: ts,
+		callback	: function(days, hours, minutes, seconds){
+			
+			var message = "";
+			
+		//	message += days + " day" + ( days==1 ? '':'s' ) + ", ";
+			message += hours + " hour" + ( hours==1 ? '':'s' ) + ", ";
+			message += minutes + " minute" + ( minutes==1 ? '':'s' ) + " and ";
+			message += seconds + " second" + ( seconds==1 ? '':'s' ) + " <br />";
+			
+			if(newYear){
+				message += "left until the new year!";
+			}
+			else {
+				message += "left to 10 days from now!";
+			}
+			
+			note.html(message);
+		}
+	});
+	
+});
+</script>	
+	
+<script>
+
+
+var ii=1;
+$(window).scroll( function(){
+
+	var blocks = $('.grafic');
+
+	var  windowSize = $(window).height();
+	var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+	
+	var viewportTop = $(scrollElem).scrollTop();
+	var	viewportBottom = (viewportTop + windowSize);
+	var offset=100;
+	
+	 var elemTop =  Math.round(blocks.offset().top ) - offset ;
+     var elemBottom = elemTop + (blocks.height());
+	
+	if ((elemTop < viewportBottom) && (elemBottom > viewportTop)){
+		
+		if (ii==1)
+		{
+			grafic();
+			
+		}
+		ii=0;
+	
+	};
+	
+
+});
+</script>	
+		 <!--#include virtual="/footer.html"-->  

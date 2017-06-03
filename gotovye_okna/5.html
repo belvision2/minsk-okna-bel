@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html>
+    
+<!-- gotovye_okna/5.html  10:58:39 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Минск-Окна.бел - 3-х створчатое пластиковое окно</title> 
+        <meta name="description" content="">
+	 <!--#include virtual="../header.html"-->  		
+			
+		<div class="section s_oi" style="padding-top: 20px">
+			<div class="content">
+	
+				<div style="width:930px; margin:0 auto;">
+					<div class="m_item">
+						<div class="i_left">
+							<div class="i_art">Артикул: <span>П-002</span></div>
+							<div class="i_img"><img height="281" src="../img/market/img5.png"></div>
+							<div class="i_size">Ширина: <span>176 см</span> Высота: <span>142 см</span> </div>						</div>
+						<div class="i_right">
+							<div class="i_name"><div>3-х створчатое пластиковое окно</div></div>
+							<div class="i_har">
+								
+																<div>Характеристики изделия:</div>
+								<ul>
+									<li>
+										3-камерный профиль, ширина 60 мм</li><li>Стеклопакет 1-камерный, 24 мм</li><li>Фурнитура ROTO									</li>
+								</ul>
+															</div>
+							<div class="i_price">
+								<div class="i_sth">Стоимость:	</div>
+								<div class="i_cost">110<span style="font-size:32px">$</span></div>
+								<div class="clr"></div>
+								<div class="i_eco">50<br><span style="font-size:20px">$</span></div>
+							</div>
+							<div class="i_cards"></div>		
+							<div class="i_note">Указанная стоимость действительна при заказе изделия без замера,
+								монтажных работ, доставки и дополнительных аксессуаров.
+							</div>							
+						</div>
+						<div class="clr"></div>
+						<div class="opl_dst">
+							<div class="od">
+								<span style="font-family: 'officinaserifcregular'; font-size:24px;">Как оплатить:</span><br>
+								<span style="font-weight:bold;">Предоплата составляет 100%</span><br>
+								<span style="font-weight:lighter;">Оплата производится в центральном
+										офисе компании "Минск-Окна.бел".
+								</span>
+							</div>
+							<div class="od" style="left:578px;">
+								<span style="font-family: 'officinaserifcregular'; font-size:24px;">Как забрать окна:</span><br>
+								<span style="font-weight:bold;">Cамовывоз бесплатно</span><br>
+								<span style="font-weight:lighter;">Доставка по Минске и области.<br>
+									В пределах МКАД 2 $<br>За МКАД +1 $ за км.
+								</span>
+							</div>
+							
+								
+							</div>
+						</div>
+						<div class="i_form"  id="icallback">
+							<h1 style="font-size:45px;padding-top:30px;" class="black">Оформить заказ</h1>
+							<div class="i_desc">3-х створчатое пластиковое окно / П-002</div> 
+								
+								<input class="iart" type="hidden" value="П-002">
+								<input class="i_name_" type="text" value="" placeholder="Имя" >
+								<input class="i_tel" type="text" value="" placeholder="Телефон" >
+								
+								<input class="i_mail" type="text" value="" placeholder="E-mail" >
+								<textarea class="i_text" placeholder="Примечание к заказу"></textarea>
+								<a  id="callback-isend">
+									<div class="b_yellow"> Заказать </div>
+								</a>
+							
+						</div>
+						
+					</div>
+				</div>
+
+			</div>
+		</div> 
+
+<script>
+
+$(".i_tel").inputmask("+375 (99) 999-99-99");
+   	
+$('#callback-isend').click(function()
+				{
+					var name=$('.i_name_').val();
+					var tel=$('.i_tel').val();
+					var art=$('.iart').val();
+					var mail=$('.i_mail').val();
+					var text=$('.i_text').val();
+					
+				//Comagic.push(['addOfflineRequest', {name: name,  phone: tel,  email: mail,  message: 'market' }]);
+					$.ajax({
+						   type: "POST",
+						   url: "forms.php",
+						   data: "name="+name+"&tel="+tel+'&f=item_send'+"&art="+art+"&mail="+mail+"&text="+text,
+						   success: function(data){ 
+						
+							//	alert ('Заявка успешно отправлена');
+								$('#hide-layout').fadeIn(300);								
+								$('#spasibo').fadeIn(300);								
+								SendComagic(name,tel,'market',mail);
+							
+								
+							} 
+					 });
+				
+				
+				});	
+</script>		
+		
+	
+		<div class="section s15">
+			<div class="content">
+				<h1 class="black">
+					<span>Преимущества заказа у нас</span>
+				</h1>
+
+				
+			<div class="okno_mod w_blocks">
+				<div class="okno_b1 w_block">
+					<div class="hh">
+						Собственное производство
+					</div>
+					<div class="tt">
+						Современное производственное оборудование позволяет изготавливать до 20000 м<sup>2</sup> в месяц!
+					</div>
+					
+				</div>
+			
+				<div class="okno_b2 w_block">
+					<div class="hh">
+						Самые низкие цены
+					</div>
+					<div class="tt">
+						Стоимость продукции и услуг в среднем на 12% ниже рыночной. Мы гарантируем низкие цены!
+					</div>
+				
+				</div>	
+
+				<div class="okno_b3 w_block">
+					<div class="hh">
+						Кратчайшие сроки
+					</div>
+					<div class="tt">
+						Срок изготовления пластиковых окон снижен до 5 рабочих дней!
+					</div>
+				
+				</div>				
+				
+				<div class="okno_b4 w_block">
+					<div class="hh">
+						Гарантия 100%
+					</div>
+					<div class="tt">
+						Гарантия на окна и комплектующие, а также производимые работы достигает 10 лет!
+					</div>
+				
+
+				</div>		
+				<div class="clr"></div>
+			</div>
+
+			</div>
+		</div>
+
+<script>
+$(window).scroll( function(){
+
+	var blocks = $('.w_blocks').children();
+
+	var  windowSize = $(window).height();
+	var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+	
+	var viewportTop = $(scrollElem).scrollTop();
+	var	viewportBottom = (viewportTop + windowSize);
+	var offset=100;
+	
+	 var elemTop =  Math.round(blocks.offset().top ) - offset ;
+     var elemBottom = elemTop + (blocks.height());
+	
+	if ((elemTop < viewportBottom) && (elemBottom > viewportTop)){
+		var i = 0;
+		animateCircle1(blocks);
+	
+	};
+	
+	 function animateCircle1() {
+            
+			$(blocks[i]).addClass('visible animated fadeIn');
+			$(blocks[i]).removeClass('hidden');
+      
+        i++;
+        if (i <= blocks.length) {
+            startAnimation();
+        }
+    }
+    
+    function startAnimation() {
+        setTimeout(function () {
+            animateCircle1();}, 450);
+    }
+
+});		
+</script>	
+		 <!--#include virtual="../footer.html"-->  

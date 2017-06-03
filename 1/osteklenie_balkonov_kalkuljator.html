@@ -1,0 +1,334 @@
+
+<!DOCTYPE html>
+<html>
+    
+<!-- osteklenie_balkonov_kalkuljator.html  10:58:17 GMT -->
+<head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Остекление лоджий калькулятор онлайн</title> 
+        <meta name="description" content="">
+        
+  <!--#include virtual="header.html"-->  
+		<div class="section s20" style="padding-top: 10px">
+			<div class="content">
+			<h1 class="" style="font-size:45px;">Расчет стоимости онлайн</h1>
+				<div class="calc calc_balkon calc2">
+					<div class="sw_block"  style="width: 350px;">
+						<div class="bl_ok inactive_"><a style="text-decoration:underline;color:blue;" href="plastikovye_okna_kalkuljator.html">Окна</a></div>
+						<div class="blsw" style="display:none;">
+							<div class="bl_sw ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+								<span class="ui-slider-handle ui-state-default ui-corner-all" tabindex="0" style="left: 50px;"></span>
+							</div>
+						</div>
+						<div class="bl_bal active_">Балконы</div>
+						<div class="clr"></div>
+						
+					</div>
+				
+				
+					<div class="c_left">
+						
+						
+						<div class="clr"></div>
+						
+						<div class="calc_main">
+						<img style="background:none; padding-left:none;" src="img/height_b.png"><img src="img/calc_balkon2/cb1p.jpg">
+						</div>
+						<div class="calc_height">
+						</div>
+						<div class="calc_width">
+						</div>  
+					</div>
+					<div class="c_right"> 
+					<div class="sw_h">Выберите тип балкона</div>
+						<div class="ul_menu_ carousel"> 
+						<div class="carousel-button-left"><a href="#"></a></div> 
+						<div class="carousel-button-right"><a href="#"></a></div> 
+					<!--	<div class="ar_left"></div>
+						<div class="ar_right"></div> -->
+							<div class="carousel-wrapper"> 
+								<div class="">
+									<ul class="calc_menu_ carousel-items">
+										<li id="cb1" class=" carousel-block">
+											<img src="img/calc_balkon2/cb1.png">
+										</li>
+										<li id="cb2" class="active carousel-block">
+											<img src="img/calc_balkon2/cb2.png">
+										</li>
+										<li id="cb3" class="carousel-block">
+											<img src="img/calc_balkon2/cb3.png">
+										</li>
+										<li id="cb4" class="carousel-block">
+											<img src="img/calc_balkon2/cb4.png">
+										</li>
+										<li id="cb5" class="carousel-block">
+											<img src="img/calc_balkon2/cb5.png">
+										</li>
+										<li id="cb6" class="carousel-block">
+											<img src="img/calc_balkon2/cb6.png">
+										</li>
+										<li id="cb7" class="carousel-block">
+											<img src="img/calc_balkon2/cb7.png">
+										</li>							
+									</ul>
+								</div>
+							</div>	
+						</div>
+					
+						<div class="sw">
+
+							<div class="sw_h" style="padding-bottom: 5px;" >
+								<span>Ширина, см</span>
+								<span style="margin-left: 114px;">Высота, см</span>
+							</div>
+							<div class="sw_block"  style="margin-top: 0px;">
+							
+								
+								<div class="counter_i_block calc_width">
+									<input class="c_width" type="text" maxlength="3" value="290">
+									<input class="counter_plus" type="button">
+									<input class="counter_minus" type="button">
+								</div>
+								<div class="calc_x">X</div>
+								<div class="counter_i_block calc_height">
+									<input class="c_height" type="text" maxlength="3" value="143">
+									<input class="counter_plus" type="button">
+									<input class="counter_minus" type="button">
+								</div>
+								
+							
+								
+								<div class="clr"></div>
+							</div>
+							<div class="clr"></div>
+						</div>
+						<div class="itogi">
+							<div class="i_txt1">
+								Стоимость сегодня:
+							</div>
+							<div class="ceny">
+								<div class="itogo">
+									20999
+								</div>
+							</div>
+							<div class="clr"></div>
+							
+						</div>
+						<div class="clr"></div>
+
+					</div>
+					<div class="clr"></div>
+					
+						<h1 class="" style="font-size:40px;padding-top:30px;"><img src="img/cz_ck.png"> Скидка 30%<span style="padding-left:50px;"> <img src="img/cz_ck.png"> Бесплатная доставка</span></h1>	
+				
+				<div class="calc_zakaz">
+					<input class="cz_name" type="text" value="" placeholder="Ваше имя" >
+					<input class="cz_tel" type="text" value="" placeholder="Телефон" >
+					
+										
+					<a  id="calc_zakaz" class="b_yellow_cz">Купить по акции</a>
+
+				</div>
+				</div>
+			</div>
+		</div>
+
+<script>
+	$(".cz_tel").inputmask("+375 (99) 999-99-99");
+$('#calc_zakaz').click(function()
+				{
+					var name=$('.cz_name').val();
+					var tel=$('.cz_tel').val();
+								if (name == '', tel == '')
+					{
+					$(".cz_tel").css("border","1px solid red");
+					$(".cz_name").css("border","1px solid red");
+					return false;
+					}
+					else {
+				//Comagic.push(['addOfflineRequest', {name: name,  phone: tel, message: 'callback2' }]);
+					$.ajax({
+						   type: "POST",
+						   url: "forms.php",
+						   data: "name="+name+"&tel="+tel+'&f=calc_zakaz_b',
+						   success: function(data){ 
+						
+								$('.cz_name').val('');
+								$('.cz_tel').val('');
+								$('#hide-layout').fadeIn(300);								
+								$('#spasibo').fadeIn(300);								
+								SendComagic(name,tel,'calc_zakaz_balkon','');
+							
+								
+							} 
+					 });
+				}
+				
+				});	
+</script>		
+		
+			
+		
+<script>
+	$('.ar_right').click(function(){
+		var c=parseInt($('.ul_menu_frame').css("margin-left")); 
+	if (c==2)
+	{
+		$(".ul_menu_frame").animate({marginLeft:'-356px'}, 1500);             
+	}
+	if (c==-356)
+	{
+		$(".ul_menu_frame").animate({marginLeft:'-716px'}, 1500);             
+	}
+   
+    
+		
+	}) 
+	
+	$('.ar_left').click(function(){
+		var c=parseInt($('.ul_menu_frame').css("margin-left")); 
+	//	alert (c); 
+	if (c==(-716))
+	{
+		$(".ul_menu_frame").animate({marginLeft:'-356px'}, 1500);             
+	}
+	if (c==(-356))
+	{
+		$(".ul_menu_frame").animate({marginLeft:'2px'}, 1500);             
+	}
+	//	$('.ul_menu_frame').css("margin-left",c+387+'px');
+	})
+	
+$(document).on('click', ".calc_menu_ li",function(){ 
+//	$(".calc_menu_ li").click(function(){
+		$(".calc_menu_ li").removeClass('active');
+		$(this).addClass('active');
+		var id=$(this).attr('id');
+		//$(".calc_balkon .calc_main").css('background','url("../img/calc_balkon2/'+id+'p.jpg") no-repeat left top');
+		$('.calc_main').html('<img style="background:none; padding-left:none;" src="img/height_b.png"><img src="img/calc_balkon2/'+id+'p.jpg">');
+	});
+
+		$(".c_width").keyup(function(){
+		if ($(".c_width").val()>700){$(".c_width").val(700)}
+	//	if ($(".c_width").val()<80){$(".c_width").val(80)}
+		$(".c_width").val(Math.floor($(".c_width").val()));
+		  
+
+
+		 
+		if ($(".c_width").val()>=80 ){balkonCalc();}
+		else {
+			$(".itogi .itogo").html('0<img style="padding-left:20px;" src="img/itogi_rub.png">');
+			}
+		
+	});
+	
+		$('.calc_width .counter_plus').click(function(){
+		var m=$('.c_width').val();
+		m++;
+		if (m>700){m=700;}
+		if (m<80){m=80;}
+		$('.c_width').val(m);
+		
+		balkonCalc();
+	});    
+	
+		$('.calc_width .counter_minus').click(function(){
+		var m=$('.c_width').val();
+		m--;
+		if (m<80){m=80;}
+		if (m>700){m=700;}
+		$('.c_width').val(m);
+		balkonCalc();
+		
+	});
+	
+	
+	
+	
+	$(".c_height").keyup(function(){
+		if ($(".c_height").val()>200){$(".c_height").val(200)}
+	//	if (parseInt($(".c_height").val())<80 && (parseInt($(".c_height").val())/10)<8){$(".c_height").val(80)}
+		$(".c_height").val(Math.floor($(".c_height").val()));
+
+		if ($(".c_height").val()>=80 ){balkonCalc();}
+		else {
+			$(".itogi .itogo").html('0<img style="padding-left:20px;" src="img/itogi_rub.png">');
+
+			}
+	})	
+	
+	
+		$('.calc_height .counter_plus').click(function(){
+		var m=$('.c_height').val();
+		m++;
+		if (m>200){m=200;}
+		if (m<80){m=80;}
+		$('.c_height').val(m);
+		
+		balkonCalc();
+	});
+	
+		$('.calc_height .counter_minus').click(function(){
+		var m=$('.c_height').val();
+		m--;
+		if (m<80){m=80;}
+		if (m>200){m=200;}
+		$('.c_height').val(m);
+		balkonCalc();
+		
+	});	
+	
+	
+	
+	
+	
+	
+	
+	function balkonCalc(){
+		var m2=78.5*0.8;
+		var c_width=$('.c_width').val();
+		var c_height=$('.c_height').val();
+		
+		var itogo=c_width*c_height*m2/10000;
+		
+		$(".itogi .itogo").html(Math.floor(itogo)+'<img style="padding-left:20px;" src="img/itogi_rub.png">');
+
+		
+	}
+	
+$(function(){
+	balkonCalc();
+})	
+</script>	
+
+
+
+	
+		<div class="section s32" style="margin-bottom:20px;margin-top:40px;">
+			<div class="content">	
+			<h1 style="font-size: 45px;">Самые низкие цены в Минске</h1>	
+			<p class="p_text" style="font-size:24px;line-height:34px;">Калькулятор позволит рассчитать стоимость установки пластиковых окон по индивидуальным<br>
+			размерам. Цены являются ознакомительными. Для получения более точного расчета необходимо<br>
+			обратиться в офис по телефону +37529 341-04-80. 
+			</p>			
+				
+				
+			</div>			
+		</div>	
+
+				<div class="banner1">
+					<div class="inner_block">
+						<h1>Купить окна зимой выгодно!</h1>
+						<p>Современные технологии установки окон<br>
+						компании «Минск-Окна.бел» позволяют<br>
+						выполнять монтаж оконных конструкций<br>
+даже при низкой температуре до -20 &deg;C.</p>
+						<p style="color:#333;padding-top:20px;font-size:27px; font-weight:bold;">А стоимость окон зимой значительно ниже!</p>
+					</div>
+				
+				</div>
+				
+				
+	 <!--#include virtual="footer.html"-->  

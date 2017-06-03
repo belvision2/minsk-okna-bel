@@ -1,0 +1,11 @@
+User-agent: Googlebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+Host:http://xn----8sbwibiidh1a.xn--90ais/
+
+User-agent: *
+Allow: /
+
+Sitemap: http://xn----8sbwibiidh1a.xn--90ais/sitemap.xml
